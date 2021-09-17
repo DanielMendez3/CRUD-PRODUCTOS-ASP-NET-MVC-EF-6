@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Taller1_DSE_MM160953.Models.Category>
+
+@{
+    ViewBag.Title = "Listado de categorías";
+}
+
+<h2>Categorias</h2>
+
+<p>
+    @Html.ActionLink("Volver a inico", "Index", "Home", null, new { @class = "btn btn-warning" })
+</p>
+<p>
+    @Html.ActionLink("Agregar Nuevo Item", "Create", null, new { @class ="btn btn-primary"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdCategory }, new { @class = "btn btn-warning"}) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.IdCategory }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.IdCategory }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

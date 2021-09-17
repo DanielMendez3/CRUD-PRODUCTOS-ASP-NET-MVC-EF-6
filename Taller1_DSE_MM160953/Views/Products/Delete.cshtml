@@ -1,0 +1,73 @@
+﻿@model Taller1_DSE_MM160953.Models.Product
+
+@{
+    ViewBag.Title = "Eliminar Item";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Seguro que quieres elminar este item?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfOrders)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfOrders)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Eliminar" class="btn btn-success btn-block" /> |
+    @Html.ActionLink("Volver", "Index", null, new { @class = "btn btn-danger" })
+
+</div>
+    }
+</div>
