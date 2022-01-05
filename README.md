@@ -1,4 +1,4 @@
-# Taller1_DSE_MM160953
+# MVC 5 EF 6
 Primer Taller DSE - MVC 5 EF 6
 Para comenzar con el proyecto debe clonar el repsositorio, luego antes de ejecutar la aplicacion por primera vez,
 asegurese de qye visual studio tiene permisos de administrador, esto para que el sistema pueda crear la base de datos loca.
